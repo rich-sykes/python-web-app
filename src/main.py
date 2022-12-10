@@ -1,3 +1,8 @@
+"""FastAPI WebApp
+
+Returns:
+    _type_: _description_
+"""
 from fastapi import FastAPI
 
 app = FastAPI(version='0.0.0',
