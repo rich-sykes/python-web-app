@@ -9,6 +9,14 @@ app = FastAPI(version='0.0.0',
               )
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+@app.get("/get-request/{name}")
+async def root(name: str = 'Richard') -> dict:
+    """A get requeest with a query parameter
+
+    Args:
+        name (str, optional): A string value, a name for example. Defaults to 'Rich'.
+
+    Returns:
+        dict: A personalised message in a dict.
+    """
+    return {"message": f"Hello {name}"}
